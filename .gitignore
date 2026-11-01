@@ -2,6 +2,7 @@ bin/
 obj/
 发布版/
 发布版-*/
+release-dist/
 .vs/
 *.user
 *.suo
