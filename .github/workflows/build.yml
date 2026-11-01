@@ -1,0 +1,26 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Build icon
+        shell: pwsh
+        run: ./tools/Build-Icon.ps1
+      - name: Build
+        run: dotnet build BuiltInKeyboardManager.csproj -c Release --warnaserror
+      - name: Publish single-file app
+        run: dotnet publish BuiltInKeyboardManager.csproj -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true -p:DebugType=None -p:DebugSymbols=false -o publish
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BuiltInKeyboardManager-win-x64
+          path: publish/内置键盘管理器.exe

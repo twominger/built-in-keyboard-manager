@@ -1,0 +1,11 @@
+bin/
+obj/
+发布版/
+发布版-*/
+.vs/
+*.user
+*.suo
+*.pfx
+*.snk
+*.cer
+*.log
