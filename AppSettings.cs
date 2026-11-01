@@ -5,9 +5,6 @@ namespace BuiltInKeyboardManager;
 internal sealed class AppSettings
 {
     public string SelectedDeviceId { get; set; } = "";
-    public bool StartWithWindows { get; set; }
-    public bool AutoDisable { get; set; } = true;
-    public bool CloseHintShown { get; set; }
 
     private static string FolderPath => Path.Combine(
         Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),

@@ -9,8 +9,8 @@
     <ApplicationIcon>assets\app-icon.ico</ApplicationIcon>
     <AssemblyName>内置键盘管理器</AssemblyName>
     <RootNamespace>BuiltInKeyboardManager</RootNamespace>
-    <Version>1.1.0</Version>
-    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.2.0</Version>
+    <FileVersion>1.2.0.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Include="assets\app-icon.png" Pack="false" />
